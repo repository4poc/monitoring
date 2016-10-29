@@ -13,7 +13,7 @@ public class FacebookDemo {
 
 	private static WebDriver driver;
 	private static String baseUrl;
-	private final String username = "varinder_gupta82@yahoo.com";
+	private final String username = "varinder_gupta25@yahoo.co.in";
 	private final String password = "valentine@0000";
 
 	@BeforeTest
