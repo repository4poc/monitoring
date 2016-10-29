@@ -14,7 +14,7 @@ public class FacebookDemo {
 	private static WebDriver driver;
 	private static String baseUrl;
 	private final String username = "varinder_gupta82@yahoo.com";
-	private final String password = "Valentine2284";
+	private final String password = "valentine@0000";
 
 	@BeforeTest
 	public static void setUp() throws Exception {
