@@ -26,7 +26,7 @@ public class FacebookDemo {
 
 	@Test
 	public void testHomePage() throws Exception {
-		String verifyTxtMsg = "How people build software";
+		String verifyTxtMsg = "Facebook helps you connect and share with the people in your life.";
 		// driver.get(baseUrl);
 		driver.navigate().to(baseUrl);
 		String result = driver.findElement(By.xpath("/html/body/div/div[2]/div[1]/div/div/div/div/div[1]/div/div")).getText();
@@ -36,15 +36,15 @@ public class FacebookDemo {
 
 	@Test(dependsOnMethods="testHomePage")
 	public void testLogin() throws Exception {
-		String verifyTxtMsg = "Learn Git and GitHub without any code!";
-		driver.findElement(By.xpath("html/body/header/div/div/div/a[2]")).click();
+		String verifyTxtMsg = "Varinder";
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath(".//*[@id='login_field']")).sendKeys(username);
-		driver.findElement(By.xpath(".//*[@id='password']")).sendKeys(password);
-		driver.findElement(By.xpath(".//*[@id='login']/form/div[4]/input[3]")).submit();
+		driver.findElement(By.xpath("//*[@id='email']")).sendKeys(username);
+		driver.findElement(By.xpath("//*[@id='pass']")).sendKeys(password);
+		driver.findElement(By.xpath("//*[@id='u_0_l']")).submit();
+		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		String result = driver.findElement(By.xpath(".//*[@id='js-pjax-container']/div[1]/div/div/h2")).getText();
+		String result = driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[1]/div/div/div/div[2]/div[1]/div[1]/div/a/span")).getText();
 		Assert.assertEquals(result, verifyTxtMsg);
 	}
 
