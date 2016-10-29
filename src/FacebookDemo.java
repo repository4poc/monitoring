@@ -40,7 +40,7 @@ public class FacebookDemo {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.findElement(By.xpath("//*[@id='email']")).sendKeys(username);
 		driver.findElement(By.xpath("//*[@id='pass']")).sendKeys(password);
-		driver.findElement(By.xpath("//*[@id='u_0_l']")).submit();
+		driver.findElement(By.xpath("/html/body/div/div[1]/div/div/div/div/div[2]/form/table/tbody/tr[2]/td[3]/label/input")).submit();
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
