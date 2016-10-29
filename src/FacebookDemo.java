@@ -55,9 +55,9 @@ public class FacebookDemo {
 	@Test(dependsOnMethods="testLogin")
 	public void testLogOut() throws Exception {
 		String verifyTxtMsg = "How people build software";
-		driver.findElement(By.xpath(".//*[@id='user-links']/li[3]/a")).click();
+		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div[1]/div/div/div/div[2]/div[2]/div[3]/div/div/div[3]/div")).click();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath(".//*[@id='user-links']/li[3]/div/div/form/button")).click();
+		driver.findElement(By.xpath("/html/body/div[23]/div/div/div/div/div[1]/div/div/ul/li[17]/a/span/span")).click();
 
 		System.out.println("Logout working...");
 		String result = driver.findElement(By.xpath("html/body/div[4]/div[1]/div/div/div[1]/h1")).getText();
