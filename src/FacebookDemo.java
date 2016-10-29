@@ -9,7 +9,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class GithubDemo {
+public class FacebookDemo {
 
 	private static WebDriver driver;
 	private static String baseUrl;
@@ -21,7 +21,7 @@ public class GithubDemo {
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		baseUrl = "https://facebook.com/";
+		baseUrl = "https://www.facebook.com/";
 	}
 
 	@Test
@@ -29,7 +29,8 @@ public class GithubDemo {
 		String verifyTxtMsg = "How people build software";
 		// driver.get(baseUrl);
 		driver.navigate().to(baseUrl);
-		String result = driver.findElement(By.xpath("html/body/div[4]/div[1]/div/div/div[1]/h1")).getText();
+		String result = driver.findElement(By.xpath("/html/body/div/div[2]/div[1]/div/div/div/div/div[1]/div/div")).getText();
+		System.out.println(result);
 		Assert.assertEquals(result, verifyTxtMsg);
 	}
 
