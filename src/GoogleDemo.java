@@ -23,7 +23,7 @@ public class GoogleDemo {
 
 	@Test
 	public void testHomePage() throws Exception {
-		String verifyTxtMsg = "Google";
+		String verifyTxtMsg = "Google123";
 		// driver.get(baseUrl);
 		driver.navigate().to(baseUrl);
 		String result = driver.findElement(By.xpath("//*[@id='hplogo']")).getAttribute("title");
