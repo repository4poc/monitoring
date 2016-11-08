@@ -18,8 +18,10 @@ public class GithubDemo {
 
 	@BeforeTest
 	public static void setUp() throws Exception {
-		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		System.setProperty("webdriver.chrome.driver", "util/chromedriver");
+		ChromeOptions option = new ChromeOptions();
+		option.addArguments("--start-maximized");
+		driver = new ChromeDriver(option);
 
 		baseUrl = "https://github.com/";
 	}
