@@ -20,7 +20,7 @@ public class GithubDemo {
 	public static void setUp() throws Exception {
 		System.setProperty("webdriver.chrome.driver", "util/chromedriver");
 		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS););
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		baseUrl = "https://github.com/";
 	}
