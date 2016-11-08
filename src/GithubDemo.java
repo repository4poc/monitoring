@@ -19,9 +19,8 @@ public class GithubDemo {
 	@BeforeTest
 	public static void setUp() throws Exception {
 		System.setProperty("webdriver.chrome.driver", "util/chromedriver");
-		ChromeOptions option = new ChromeOptions();
-		option.addArguments("--start-maximized");
-		driver = new ChromeDriver(option);
+		driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS););
 
 		baseUrl = "https://github.com/";
 	}
