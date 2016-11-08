@@ -2,7 +2,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -15,8 +15,8 @@ public class GoogleDemo {
 
 	@BeforeTest
 	public static void setUp() throws Exception {
-		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		System.setProperty("webdriver.chrome.driver", "util/chromedriver");
+		driver = new ChromeDriver();
 
 		baseUrl = "https://www.google.co.in/";
 	}
