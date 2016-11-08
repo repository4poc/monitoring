@@ -15,8 +15,8 @@ public class GoogleDemo {
 
 	@BeforeTest
 	public static void setUp() throws Exception {
-		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		System.setProperty("webdriver.chrome.driver", "util/chromedriver");
+		driver = new ChromeDriver();
 
 		baseUrl = "https://www.google.co.in/";
 	}
