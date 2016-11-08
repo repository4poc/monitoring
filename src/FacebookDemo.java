@@ -1,9 +1,8 @@
-
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -18,7 +17,8 @@ public class FacebookDemo {
 
 	@BeforeTest
 	public static void setUp() throws Exception {
-		driver = new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver", "util/chromedriver");
+		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		baseUrl = "https://www.facebook.com/";
